@@ -1,0 +1,130 @@
+* {
+  padding:0;
+  margin:0;
+  vertical-align:baseline;
+  list-style:none;
+  border:0
+}
+
+.ranger {
+  position: absolute;
+  bottom: 0;
+  /*background-image: url(ranger.png);*/
+  background-image: url('images/ranger.png');
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 70px;
+  margin-left: 50px;
+
+  -webkit-animation: mover 1s infinite  alternate;
+    animation: gravityEffects 1s infinite  alternate;
+}
+
+/* Gravity effects on ranger 8*/
+@keyframes gravityEffects {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-20px); }
+}
+
+.asteroid {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  bottom: 15px;
+  background-image: url('images/asteroid.png'); 
+}
+
+/*
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+*/
+
+.game-over {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  font-family: arial;
+  text-align: center;
+  width: 450x;
+  height: 150px;
+ /* background-image: url('images/cooper-game-over.gif');*/
+  background-repeat: no-repeat;
+}
+
+.gargantua {
+  position: absolute;
+  bottom: 0px;
+  background-image: url('images/gargantua4.jpg');
+ /* background-image: url('black-hole-gargantua.gif');*/
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; 
+  background-size: cover;
+ 
+  /*
+  -webkit-animation: mover 180s infinite  alternate;
+    animation: moveGargantua 180s infinite  alternate; */
+}
+/*
+@keyframes moveGargantua {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100px); }
+}
+*/
+
+/*Acretion disc1 rolling*/
+.background1 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url('images/background.png');
+  background-repeat: repeat-x;
+  animation: slideright 600s infinite linear;
+  -webkit-animation: slideright 600s infinite linear;
+ /* opacity : 0.8;*/
+  width: 100%;
+  height: 20px;
+}
+
+/* Acretion disc2 rolling */
+.background2 {
+  position: absolute;
+  bottom: 0px;
+  background-image: url('images/background.png');
+  background-repeat: repeat-x;
+
+    animation: slideright 1500s infinite linear;
+  -webkit-animation: slideright 1500s infinite linear;
+
+  opacity : 0.5;
+  width: 100%;
+  height: 50px;
+}
+
+/* Creates the Acretion disc rolling moviment */
+@keyframes slideright {
+  from {
+      background-position: 70000%;
+  }
+  to {
+      background-position: 0%;
+  }
+}
+
+.pointsBoard {
+  position: absolute;
+  height: 25px;
+  width: 20%;
+  font-weight: bolder;
+  color: #ddd;
+  background-color: rgb(221, 221, 221);
+  margin: 15px;
+  padding: 12px;
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px blue, 0 0 5px darkblue;
+}
