@@ -1,1 +1,1 @@
-<?php include_once(“index.html”); ?>
+<? phpversion(string $extension = ?): string ?>
