@@ -13,6 +13,10 @@ var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
 setInterval(setTime, 1000);
 
+function modalShow () {
+  $("#myModal").modal('show');
+}
+
 function pad(val) {
   var valString = val + "";
   if (valString.length < 2) {
@@ -30,8 +34,10 @@ function handleKeyUp(event) {
   }
 }
 
-function game_start(){
+function gameStart(){
   audio_play(); 
+  createAsteroid();
+  document.addEventListener('keyup', handleKeyUp);
 }
 
 function audio_play() {
@@ -41,15 +47,6 @@ function audio_play() {
 function audio_stop() {
   audio.pause();
   audio.currentTime = 0;
-}
-
-function initial_msg(){
-  alert('Tass: Você está sendo atraído pelo Gargantua e sua missão agora é tentar escapar de sua gravidade!');
-}
-
-function commands_msg(){
-  alert('Tass: Utilize a barra de espaço do seu teclado para pular os objetos que aparecem no disco de acreção');
-  alert('Tass: Boa sorte, Cooper!')
 }
 
 function jump() {
@@ -103,7 +100,8 @@ function createAsteroid() {
       clearInterval(leftTimer);
       isGameOver = true;
       audio_stop();
-      document.body.innerHTML = `<div class="game-over"><h1>Game Over - Pontos: ${countAsteroids}</h1><img src="images/cooper-game-over.gif" alt="game over"></div>`;
+      document.body.innerHTML = `<div class="game-over"><h1>Game Over - Pontos: ${countAsteroids}</h1><h4>"Não adentre a boa noite apenas com ternura , não entre nessa noite acolhedora com ternura .
+      Pois a velhice queima ao cair do dia , fúria fúria contra luz que o esplendor já não fulgura." -  Dylan Thomas</h4><img src="images/cooper-game-over.gif" alt="game over"></div>`;
     } else {
       asteroidPosition -= 10;
       asteroid.style.left = asteroidPosition + 'px';
@@ -131,8 +129,10 @@ function setTime() {
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
 }
 
-createAsteroid();
-document.addEventListener('keyup', handleKeyUp);
+//createAsteroid();
+//document.addEventListener('keyup', handleKeyUp);
+
+
 
 
 

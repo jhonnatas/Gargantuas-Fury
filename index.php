@@ -1,1 +1,0 @@
-<? phpversion(string $extension = ?): string ?>
