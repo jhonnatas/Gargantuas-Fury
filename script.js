@@ -1,11 +1,13 @@
 const ranger = document.querySelector('.ranger');
 const background = document.querySelector('.background1');
+const home_song = "audio/X2Download.com - [No Copyright Sound] Space [Hybrid] [ FREE USE MUSIC ] - Keys of Moon Music - Voice of Eternity (128 kbps).mp3";
 const main_song = "audio/Hans-Zimmer-No-Time-for-Caution.mp3";
 
 let isJumping = false;
 let isGameOver = false;
 let position = 0;
 let countAsteroids = 0;
+let home_audio = new Audio(home_song);
 let audio = new Audio(main_song);
 //Time counter
 var minutesLabel = document.getElementById("minutes");
@@ -35,6 +37,7 @@ function handleKeyUp(event) {
 }
 
 function gameStart(){
+  home_audio_stop();
   audio_play(); 
   createAsteroid();
   document.addEventListener('keyup', handleKeyUp);
@@ -44,9 +47,18 @@ function audio_play() {
   audio.play();  
 }
 
+function home_audio_play() {
+  home_audio.play();  
+}
+
 function audio_stop() {
   audio.pause();
   audio.currentTime = 0;
+}
+
+function home_audio_stop() {
+  home_audio.pause();
+  home_audio.currentTime = 0;
 }
 
 function jump() {
@@ -100,8 +112,18 @@ function createAsteroid() {
       clearInterval(leftTimer);
       isGameOver = true;
       audio_stop();
-      document.body.innerHTML = `<div class="game-over"><h1>Game Over - Pontos: ${countAsteroids}</h1><h4>"Não adentre a boa noite apenas com ternura , não entre nessa noite acolhedora com ternura .
-      Pois a velhice queima ao cair do dia , fúria fúria contra luz que o esplendor já não fulgura." -  Dylan Thomas</h4><img src="images/cooper-game-over.gif" alt="game over"></div>`;
+      document.body.innerHTML = `<div class="game-over"><h3 class="display-6">Game Over - <span class="badge bg-secondary">Pontos: ${countAsteroids}</span></h1>
+      <figure class="text-center">
+        <blockquote class="blockquote">
+          <p>Não adentre a boa noite apenas com ternura, não entre nessa noite acolhedora com ternura. Pois a velhice queima ao cair do dia, 
+          fúria fúria contra luz que o esplendor já não fulgura.</p>
+        </blockquote>
+        <figcaption class="blockquote-footer">
+          <cite title="Source Title">Dylan Thomas</cite>
+        </figcaption>
+      </figure>      
+     </div>`;
+
     } else {
       asteroidPosition -= 10;
       asteroid.style.left = asteroidPosition + 'px';
@@ -128,9 +150,6 @@ function setTime() {
   secondsLabel.innerHTML = pad(totalSeconds % 60);
   minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
 }
-
-//createAsteroid();
-//document.addEventListener('keyup', handleKeyUp);
 
 
 

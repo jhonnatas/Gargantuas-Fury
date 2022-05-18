@@ -12,14 +12,15 @@
   
 
     <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-<link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#7952b3">
+    <link rel="apple-touch-icon" href="/docs/5.0/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#7952b3">
 
+    <script src="script.js" charset="UTF-8" defer></script>
 
     <style>
       .bd-placeholder-img {
@@ -41,38 +42,32 @@
     <!-- Custom styles for this template -->
     <link href="cover.css" rel="stylesheet">
   </head>
-  <body class="d-flex h-100 text-center text-white bg-dark">
-    
-<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url('/images/gargantua-start-page.jpg'); background-image: cover;">
-  <header class="mb-auto">
-    <div>
-      <h3 class="float-md-start mb-0">Cover</h3>
-      <nav class="nav nav-masthead justify-content-center float-md-end">
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <body class="d-flex h-100 text-center text-white bg-dark" onload="home_audio_play();" >    
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column" style="background-image: url('/images/gargantua-start-page.jpg'); background-image: cover;">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">A game made by an Interstelllar fan</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Contact</a>
+          </nav>
+        </div>
+      </header>
 
-  <main class="px-3">
-    <h1>Gargantua's Fury</h1>
-    <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-    <p class="lead">
-      <a href="#" style="color:#212529;" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-    </p>
-    <!-- html button designing and calling the event in javascript -->
-<input id="btntest"  style="color:#212529;" class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="button" value="Game Start" 
-onclick="window.location.href = 'game.html'" />
+      <main class="px-3">
+        <h1>Gargantua's Fury</h1>
+        <p class="lead">Fight for mankind future, while escaping from the super massive black hole Gargantua.</p>
+        <p class="lead">
+          <a href="https://eventhorizontelescope.org/blog/astronomers-reveal-first-image-black-hole-heart-our-galaxy" style="color:#212529;" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more about blackholes</a>
+        </p>
+        <!-- html button designing and calling the event in javascript -->
+        <input id="btntest"  style="color:#212529;" class="btn btn-lg btn-secondary fw-bold border-white bg-white" type="button" value="Game Start" onclick="window.location.href = 'game.html'" />
+      </main>
 
-  </main>
-
-  <footer class="mt-auto text-white-50">
-    <p>Cover template for <a href="https://getbootstrap.com/" class="text-white">Bootstrap</a>, by <a href="https://twitter.com/mdo" class="text-white">@mdo</a>.</p>
-  </footer>
-</div>
-
-
-    
+      <footer class="mt-auto text-white-50">
+        <p>Gargantuas' Fury. A game made by <a href="https://github.com/jhonnatas" class="text-white">Anne Raphaelle and Jhonnatas Aires</a>, just two Interstelllar fans.</p>
+      </footer>
+    </div>    
   </body>
 </html>
