@@ -1,7 +1,7 @@
 const ranger = document.querySelector('.ranger');
 const background = document.querySelector('.background1');
-const home_song = "audio/X2Download.com - [No Copyright Sound] Space [Hybrid] [ FREE USE MUSIC ] - Keys of Moon Music - Voice of Eternity (128 kbps).mp3";
-const main_song = "audio/Hans-Zimmer-No-Time-for-Caution.mp3";
+const home_song = "audio/X2Download.com - [No Copyright Sound] Space [Hybrid] [ FREE USE MUSIC ] - Keys of Moon Music - Voice of Eternity (128 kbps).ogg";
+const main_song = "audio/Hans-Zimmer-No-Time-for-Caution.ogg";
 
 let isJumping = false;
 let isGameOver = false;
@@ -46,11 +46,13 @@ function gameStart(){
 }
 
 function audio_play() {
-  audio.play();  
+  audio.play();
+  audio.loop = true; 
 }
 
 function home_audio_play() {
-  home_audio.play();  
+  home_audio.play();
+  home_audio.loop = true;
 }
 
 function audio_stop() {
