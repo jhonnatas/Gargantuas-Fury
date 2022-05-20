@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Gargantua's fury</title>
+  <link rel="stylesheet" href="style.css"></link>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 
   <script>
-  $(document).ready(function() {
-      $("#myModal").modal("show");
+  //Shows the modal box with instructions when page loads.
+  $(document).ready(function() {     
+      $("#myModal").modal('show');
   });
   </script>
 
-  <link rel="stylesheet" href="style.css"></link>
-
   <script src="script.js" charset="UTF-8" defer></script>
+
   </head>
   <body>
     <div id="gargan" class="gargantua"></div>  
@@ -25,23 +26,24 @@
     </div>  
     <div class="background2"></div>
     <div class="background1"></div>       
-    <div class="ranger"></div>  
-    
-    <div class="m-4" style="color: white;">
-      <div id="myModal" class="modal fade" tabindex="-1">
+    <div class="ranger"></div>
+
+    <!-- Modal box -->
+    <div class="m-4" style="color: white; ">
+      <div id="myModal"  style="opacity: 80%;" class="modal fade" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
         <div class="modal-dialog">
           <div class="modal-content" style="background-color: #212529;">
             <div class="modal-header">
               <h5 class="modal-title">Tass' instructions</h5>
-              <button type="button"  class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
               <p>O objetivo do jogo é ajudar a tripulação do ranger a escapar da força de atração do buraco negro super massivo Gargantua.</p>
               <p>Utilize a Barra de espaço para pular os asteroides.</p>
+              <p>Cada asteroide desviado equivale a 1 ponto.</p>
               <p class="text-secondary"><small>Boa sorte!</small></p>
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-primary" onclick="gameStart();" data-bs-dismiss="modal">Go!</button>
+              <button type="button" class="btn btn-secondary" onclick="gameStart();" data-bs-dismiss="modal">Go!</button>
             </div>
           </div>
         </div>

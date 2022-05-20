@@ -9,11 +9,12 @@ let position = 0;
 let countAsteroids = 0;
 let home_audio = new Audio(home_song);
 let audio = new Audio(main_song);
+
 //Time counter
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-setInterval(setTime, 1000);
+
 
 function modalShow () {
   $("#myModal").modal('show');
@@ -38,7 +39,8 @@ function handleKeyUp(event) {
 
 function gameStart(){
   home_audio_stop();
-  audio_play(); 
+  audio_play();
+  setInterval(setTime, 1000); 
   createAsteroid();
   document.addEventListener('keyup', handleKeyUp);
 }

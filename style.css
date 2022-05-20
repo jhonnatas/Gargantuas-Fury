@@ -65,9 +65,8 @@
  /* background-image: url('black-hole-gargantua.gif');*/
   background-repeat: no-repeat;
   width: 100%;
-  height: 100%; 
-  background-size: cover;
- 
+  height: 100vh; 
+  background-size: cover; 
   /*
   -webkit-animation: mover 180s infinite  alternate;
     animation: moveGargantua 180s infinite  alternate; */
